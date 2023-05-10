@@ -25,3 +25,4 @@
 - DEFAULT ( setta il valore alla colonna qualora non ci fosse nessun valore)
 - AUTO_INCREMENT (incrementa di +1 usato colonne tipo numero per gli ID )
 - UNIQUE ( valore unico NO ripetizioni all'interno colonna)
+- NULLABLE (non tutte i dati posso avere descrizione)

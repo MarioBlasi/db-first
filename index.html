@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AutoUsate</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container text-center shadow mt-5">
+        <img
+          src="data:image/png;base64,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"
+          alt=""
+        />
+      </div>
+    </header>
+    <main class="mt-5">
+      <div class="container shadow">
+        <table class="shadow">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Marca</th>
+              <th>Modello</th>
+              <th>Chilometraggio</th>
+              <th>Prezzo</th>
+              <th>Colore</th>
+              <th>Descrizione</th>
+              <th>Carburante</th>
+              <th>Anno</th>
+              <th>Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Fiat</td>
+              <td>Panda</td>
+              <td>100000</td>
+              <td>5000.00 €</td>
+              <td>Bianco</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              <td>Benzina</td>
+              <td>2010</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Renault</td>
+              <td>Clio</td>
+              <td>80000</td>
+              <td>7500.00 €</td>
+              <td>Grigio</td>
+              <td>
+                Nulla gravida lacus eu neque malesuada, quis rhoncus eros
+                dictum.
+              </td>
+              <td>Benzina</td>
+              <td>2015</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Renault</td>
+              <td>Clio</td>
+              <td>80000</td>
+              <td>7500.00 €</td>
+              <td>Grigio</td>
+              <td>
+                Nulla gravida lacus eu neque malesuada, quis rhoncus eros
+                dictum.
+              </td>
+              <td>Benzina</td>
+              <td>2015</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Fiat</td>
+              <td>Panda</td>
+              <td>100000</td>
+              <td>5000.00 €</td>
+              <td>Bianco</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              <td>Benzina</td>
+              <td>2010</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Fiat</td>
+              <td>Panda</td>
+              <td>100000</td>
+              <td>5000.00 €</td>
+              <td>Bianco</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              <td>Benzina</td>
+              <td>2010</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Renault</td>
+              <td>Clio</td>
+              <td>80000</td>
+              <td>7500.00 €</td>
+              <td>Grigio</td>
+              <td>
+                Nulla gravida lacus eu neque malesuada, quis rhoncus eros
+                dictum.
+              </td>
+              <td>Benzina</td>
+              <td>2015</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Renault</td>
+              <td>Clio</td>
+              <td>80000</td>
+              <td>7500.00 €</td>
+              <td>Grigio</td>
+              <td>
+                Nulla gravida lacus eu neque malesuada, quis rhoncus eros
+                dictum.
+              </td>
+              <td>Benzina</td>
+              <td>2015</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Fiat</td>
+              <td>Panda</td>
+              <td>100000</td>
+              <td>5000.00 €</td>
+              <td>Bianco</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              <td>Benzina</td>
+              <td>2010</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,32 +1,25 @@
 # Database tabella auto usate
 
-## data types:
+## Entity name: CONCESSIONARIO
 
-- strings: varchar(number), char(number), text, longtext
-
-- numbers: * tinyint ( usa solo 1BYTE num da -128 a 127 boolean),
-  *small/medium int ( occupano 2 E 3 BYTE),
-  _ int ( BYTE da MENO a PIU' 2 milioni),
-  _ bigint ( il DOPPIO di INT)
-
-- decimals: float(i, d), double(i,d), decimal(i, d)
-
-- dates: DATETIME (YYYY--MM-GG HH:II:SS), DATE, YEAR, TIME, TIMESTAMP ---> date nel database - tipi di dato per le date
+## Table name: AUTO
 
 ## Table columns AutoUsate
 
-ID
+ID | INT PRIMARY KEY, UNIQUE, NOT NULL, AUTO_INCREMENT
 
-MARCA
+MARCA | VARCHAR(50), NOT NULL
 
-MODELLO
+MODELLO | VARCHAR(50), NOT NULL
 
-CHILOMETRAGGIO
+CHILOMETRAGGIO | DECIMAL(6, 2) "999.999,99" , NOT NULL
 
-PREZZO
+PREZZO | DECIMAL(5, 2) "99.999,99", NOT NULL
 
-COLORE
+COLORE VARCHAR(10), NOT NULL
 
-DESCRIZIONE
+DESCRIZIONE | TEXT, NOT NULL, NULLABLE (non tutte le auto posso avere descrizione)
 
-CARBURANTE
+CARBURANTE | CHAR(4), NOT NULL
+
+YEAR | YEAR, NOT NULL
